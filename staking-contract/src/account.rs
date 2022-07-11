@@ -1,6 +1,9 @@
+use near_sdk::Timestamp;
+
 use crate::*;
 
 #[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
+#[serde(crate="near_sdk::serde")]
 pub struct Account {
     pub stake_balance: Balance,
     pub pre_reward: Balance,
